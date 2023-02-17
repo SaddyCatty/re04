@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(lightpink, white);
+}
+.heart {
+  font-size: 30px;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  color: red;
+  background-color: currentColor;
+  box-shadow: 0 0 2em; /*这里只是给了向x轴与y轴的偏移量，没有设置其他的模糊*/
+  transition: box-shadow 0.8s cubic-bezier(0.5, 1.7, 0.5, 1.5),
+    filter 0.8s 0.8s cubic-bezier(0.75, 3.7, 0.25, 1);
+}
+.heart:hover {
+  box-shadow: -3.3em -3.3em, -2.2em -3.3em, 2.2em -3.3em, 3.3em -3.3em,
+    -4.4em -2.2em, -3.3em -2.2em, -2.2em -2.2em, -1.1em -2.2em, 1.1em -2.2em,
+    2.2em -2.2em, 3.3em -2.2em, 4.4em -2.2em, -4.4em -1.1em, -3.3em -1.1em,
+    -2.2em -1.1em, -1.1em -1.1em, 0em -1.1em, 1.1em -1.1em, 2.2em -1.1em,
+    3.3em -1.1em, 4.4em -1.1em, -4.4em 0em, -3.3em 0em, -2.2em 0em, -1.1em 0em,
+    0em 0em, 1.1em 0em, 2.2em 0em, 3.3em 0em, 4.4em 0em, -3.3em 1.1em,
+    -2.2em 1.1em, -1.1em 1.1em, 0em 1.1em, 1.1em 1.1em, 2.2em 1.1em, 3.3em 1.1em,
+    -2.2em 2.2em, -1.1em 2.2em, 0em 2.2em, 1.1em 2.2em, 2.2em 2.2em,
+    -1.1em 3.3em, 0em 3.3em, 1.1em 3.3em, 0em 4.4em;
+  filter: drop-shadow(3.3em 2.2em lightblue);
+  color: hsla(0, 100%, 50%, 0.8);
+}
